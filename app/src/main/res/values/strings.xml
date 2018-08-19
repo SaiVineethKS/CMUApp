@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">CMUApp</string>
+    <string name="business_name">Abhyankars</string>
+    <string name="product_one">Chakli</string>
+    <string name="product_two">Peda</string>
+    <string name="product_three">Nankaathai</string>
+    <string name="product_four">Potato Wafer</string>
+    <string name="product_five">Red Sev</string>
+    <string name="product_six">Shakarpara</string>
+    <string name="product_seven">Pepper wafer</string>
+    <string name="product_eight">Laddo</string>
+    <string name="product_nine">Dry Amla</string>
+
+
+</resources>
