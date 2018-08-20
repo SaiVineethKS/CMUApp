@@ -5,7 +5,7 @@ android {
     buildToolsVersion "28.0.2"
     defaultConfig {
         applicationId "com.example.android.cmuapp"
-        minSdkVersion 15
+        minSdkVersion 20
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"

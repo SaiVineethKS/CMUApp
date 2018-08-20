@@ -10,6 +10,12 @@
     <string name="product_seven">Pepper wafer</string>
     <string name="product_eight">Laddo</string>
     <string name="product_nine">Dry Amla</string>
+    <string name="address_line_one">Shop no 7, Vishwakarma Paradise</string>
+    <string name="address_line_two">Vasai 401202, Maharashtra</string>
+    <string name="email">abhyankars@gmail.com</string>
+    <string name="contact">(+91)9637880247</string>
+    <string name="description">We sell Dry Fruits, Farsan and Sweets</string>
+    <string name="hours">10AM - 6 PM. All Days except Sunday.</string>
 
 
 </resources>
