@@ -1,70 +1,183 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="match_parent">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
     tools:context="com.example.android.cmuapp.MainActivity">
 
     <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="609dp"
-        android:layout_height="320dp"
-        android:layout_marginLeft="-11dp"
-        android:layout_marginTop="-4dp"
-        android:alpha="0.5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/main_background"
         android:scaleType="fitXY"
-        app:srcCompat="@drawable/main_background"
-        tools:layout_editor_absoluteY="-1dp" />
+        android:alpha="0.4"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="cursive"
+        android:text="@string/business_name"
+        android:textColor="@color/business_color"
+        android:layout_alignParentStart="true"
+        android:padding="16dp"
+        android:textSize="68sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="314dp"
+        android:layout_height="32dp"
+        android:text="@string/description"
+        android:textColor="@color/business_color"
+        android:textSize="18sp"
+        android:textStyle="bold|italic"
+        android:layout_alignBottom="@id/textView2"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp" />
+
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.MapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="97dp"
+        android:layout_weight="0.13"
+        android:layout_above="@id/ContactUs"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginStart="32dp" />
 
 
     <LinearLayout
+        android:id="@+id/ContactUs"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/common_google_signin_btn_text_light_focused"
+        android:orientation="vertical"
+        android:weightSum="1"
+        app:layout_constraintBottom_toTopOf="@+id/map"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="5dp"
+        tools:layout_editor_absoluteY="260dp"
+        tools:layout_editor_absoluteX="-28dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="318dp"
-            android:layout_height="86dp"
-            android:layout_marginLeft="32dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="7dp"
-            android:fontFamily="cursive"
-            android:text="@string/business_name"
-            android:textColor="@color/business_color"
-            android:textSize="68sp"
-            android:textStyle="bold"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/textView3"
+        <ImageView
+            android:id="@+id/imageView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="155dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            app:srcCompat="@drawable/location1" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingTop="10dp"
             android:text="@string/address_line_one"
-            android:textColor="@color/common_google_signin_btn_text_dark_focused"
-            android:textSize="19sp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            android:textSize="16sp" />
+    </LinearLayout>
 
-        <TextView
-            android:id="@+id/textView11"
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="37dp"
+        android:paddingTop="-3dp"
+        android:text="@string/address_line_two"
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="1dp"
-            android:text="@string/address_line_two"
-            android:textColor="@color/common_google_signin_btn_text_dark_focused"
-            android:textSize="19sp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+            android:paddingLeft="10dp"
+            app:srcCompat="@drawable/email" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1.00"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            android:text="@string/email"
+            android:textAlignment="viewStart"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            app:srcCompat="@android:drawable/stat_sys_phone_call" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="39dp"
+            android:layout_height="27dp"
+            android:layout_weight="2.77"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            android:text="@string/contact"
+            android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
 
-</FrameLayout>
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.13"
+            android:paddingLeft="10dp"
+            app:srcCompat="@drawable/clock" />
 
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1.94"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            android:text="@string/hours"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
+</ScrollView>
