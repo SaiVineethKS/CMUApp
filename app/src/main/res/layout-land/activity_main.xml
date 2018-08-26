@@ -11,14 +11,15 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
+    android:id="@+id/relative_layout"
     tools:context="com.example.android.cmuapp.MainActivity">
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/main_background"
-        android:scaleType="fitXY"
-        android:alpha="0.4"/>
+        android:alpha="0.4"
+        android:scaleType="centerCrop"
+        android:src="@drawable/main_background" />
 
     <TextView
         android:id="@+id/textView2"
@@ -40,36 +41,34 @@
         android:textColor="@color/business_color"
         android:textSize="18sp"
         android:textStyle="bold|italic"
-        android:layout_alignBottom="@id/textView2"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="98dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginStart="16dp" />
-
+        android:layout_alignParentTop="true"
+        android:layout_alignEnd="@+id/textView2" />
 
     <fragment
         android:id="@+id/map"
         android:name="com.google.android.gms.maps.MapFragment"
+        android:layout_height="200dp"
         android:layout_width="match_parent"
-        android:layout_height="97dp"
-        android:layout_weight="0.13"
-        android:layout_above="@id/ContactUs"
-        android:layout_marginBottom="10dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginStart="32dp" />
+        android:layout_below="@id/textView4"
+        android:layout_marginTop="270dp"
+        />
+
 
 
     <LinearLayout
-        android:id="@+id/ContactUs"
+        android:id="@+id/contact_us"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
         android:layout_marginLeft="5dp"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@id/map"
+        android:layout_marginTop="10dp"
+        android:gravity="bottom"
         android:background="@color/common_google_signin_btn_text_light_focused"
         android:orientation="vertical"
         android:weightSum="1"
-        app:layout_constraintBottom_toTopOf="@+id/map"
-        app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginStart="5dp"
         tools:layout_editor_absoluteY="260dp"
         tools:layout_editor_absoluteX="-28dp">
@@ -143,9 +142,8 @@
 
         <TextView
             android:id="@+id/textView12"
-            android:layout_width="39dp"
-            android:layout_height="27dp"
-            android:layout_weight="2.77"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:paddingLeft="5dp"
             android:paddingTop="5dp"
             android:text="@string/contact"
@@ -162,7 +160,6 @@
             android:id="@+id/imageView6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="0.13"
             android:paddingLeft="10dp"
             app:srcCompat="@drawable/clock" />
 
@@ -170,7 +167,6 @@
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_weight="1.94"
             android:paddingLeft="5dp"
             android:paddingTop="5dp"
             android:text="@string/hours"
@@ -179,5 +175,8 @@
 
     </LinearLayout>
     </LinearLayout>
+
+
+
 </RelativeLayout>
 </ScrollView>
